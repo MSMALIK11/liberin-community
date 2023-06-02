@@ -1,9 +1,8 @@
-
-
 export default function Home() {
   return (
   <main>
-    liberin comminity 
+    liberin comminity
+
   </main>
   )
 }

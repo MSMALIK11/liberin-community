@@ -8,20 +8,44 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.css-46bh2p-MuiCardContent-root {
+  padding-top: 0px !important;
+}
+.ql-container {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: white;
+
+ 
+}
+.editor-section{
+  height: auto;
+  overflow: hidden;
+  min-height: 200px;
+
+}
+.editor-input-title{
+  margin-bottom: 10px;
+  min-height: 50px;
+  height: auto;
+  outline: none;
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+  word-wrap: wrap;
+  white-space:pre-wrap;
+
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.editor-input-title::placeholder{
+  color: rgb(90, 78, 78);
+font-style: oblique;
+font-weight: bold;
+letter-spacing: 2px;
+}
+
+
+.postCard .css-185gdzj-MuiCardHeader-root{
+  padding-top: 0 !important;
 }
