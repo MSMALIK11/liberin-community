@@ -9,6 +9,7 @@ import ReactQuill from "react-quill";
 
 
 import eventTypes from '../../../types/types.d'
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 type CreatePostProps = {};
 
 hljs.configure({
@@ -77,13 +78,14 @@ const Editor = ({markdownText,event}:eventTypes) => {
             theme="snow"
             modules={modules}
             formats={formats}
+            name="markDownText"
             placeholder={placeholder}
           />
-          <div className="ql-snow">
-            {/* <div className="ql-editor">
+          {/* <div className="ql-snow">
+            <div className="ql-editor">
               <ReactMarkdown children={markdownText} rehypePlugins={[rehypeRaw]} />
-            </div> */}
-          </div>
+            </div>
+          </div> */}
           
          
         </section>

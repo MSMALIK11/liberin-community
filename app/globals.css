@@ -18,6 +18,13 @@
 
  
 }
+.live-container{
+  width: 40vw;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin-left: 5px;
+
+}
 .editor-section{
   height: auto;
   overflow: hidden;
@@ -35,6 +42,8 @@
   letter-spacing: 0.7px;
   word-wrap: wrap;
   white-space:pre-wrap;
+height: auto;
+
 
 }
 
@@ -48,4 +57,27 @@ letter-spacing: 2px;
 
 .postCard .css-185gdzj-MuiCardHeader-root{
   padding-top: 0 !important;
+}
+.desc{
+  display: flex;
+}
+.editor-header{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  width: 75%;
+ 
+}
+textarea{
+outline: none;
+
+}
+
+.header-action{
+  display: flex;
+  align-items: center;
+}
+
+article{
+  width: 100%;
 }

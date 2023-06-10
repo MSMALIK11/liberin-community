@@ -6,10 +6,9 @@ import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
-import Avatar from "@mui/material/Avatar";
-import IconButton, { IconButtonProps } from "@mui/material/IconButton";
+
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
+
 import Box from "@mui/material/Box";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
@@ -17,8 +16,9 @@ import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import Skeleton from "@mui/material/Skeleton";
 import BugReportIcon from "@mui/icons-material/BugReport";
 import Fab from "@mui/material/Fab";
+import Link from "next/link";
 
-export default function PostCard({ isLoading }: { isLoading: boolean }) {
+export default function PostCard({ isLoading,post }: { isLoading: boolean,post:{} }) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -66,16 +66,17 @@ export default function PostCard({ isLoading }: { isLoading: boolean }) {
           <div className="mb-6 flex gap-4">
           <div>
 
-            <Fab color="error" aria-label="add">
-              <BugReportIcon />
+            <Fab color="error" aria-label="add" size="small" className="bg-green-400"  >
+              <BugReportIcon className="text-red-400"  />
             </Fab>
           </div>
             
             <div className="d-block">
+              <Link href={`/home/${post.title}`}>
             <span className="text-red-400 hover:text-blue-400 hover:underline cursor-pointer">
-              This impressive paella is a perfect party dish and a fun meal to
-              cook together with your guests.
+             {post.title}
             </span>
+              </Link>
             <Typography variant="subtitle2" color="text.secondary">June 2023</Typography>
           
             {isLoading ? (
@@ -88,13 +89,7 @@ export default function PostCard({ isLoading }: { isLoading: boolean }) {
           />
         ) : (
           <Typography  variant="subtitle2" color="text.secondary" marginTop={2}>
-            When discussing performance with colleagues, teaching, sending a bug
-            report or searching for guidance on mailing lists and here on Stack
-            When discussing performance with colleagues, teaching, sending a bug
-            report or searching for guidance on mailing lists and here on Stack
-            When discussing performance with colleagues, teaching, sending a bug
-            report or searching for guidance on mailing lists and here on Stack
-            Overflow, a reproducible example is often asked and always ...
+           {post.description}
           </Typography>
         )}
 

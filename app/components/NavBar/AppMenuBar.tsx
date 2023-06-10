@@ -161,7 +161,7 @@ export default function AppMenuBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static"  className='appBar' position="fixed" >
+      <AppBar className='appBar' position="fixed" >
         <Toolbar>
           <IconButton
             size="large"
@@ -189,7 +189,7 @@ export default function AppMenuBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
-          <Box sx={{ flexGrow: 1 }}>
+          <Box >
 <Link href="/new" sx={{textTransform:'capitalize',borderColor:'#fff',color:'#fff'}}>Create Post</Link>
           </Box>
           <Box sx={{ flexGrow: 1 }} />

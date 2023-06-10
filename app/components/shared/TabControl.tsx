@@ -24,7 +24,7 @@ export default function TabControl() {
         aria-label="secondary tabs example"
       >
          {
-          type.map((cat)=> <Tab value={cat} label={cat} />)
+          type.map((cat)=> <Tab value={cat} label={cat} key={cat} />)
         }
        
       </Tabs>
